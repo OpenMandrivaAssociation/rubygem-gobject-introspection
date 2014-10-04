@@ -15,6 +15,7 @@ BuildRequires:  rubygem(glib2)
 BuildRequires:  rubygem-glib2-devel
 BuildRequires:  ruby-devel
 BuildRequires:  pkgconfig(glib-2.0)
+BuildRequires:	pkgconfig(gobject-introspection-1.0)
 
 %description
 Ruby binding of gobject-introspection.
