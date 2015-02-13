@@ -4,7 +4,7 @@
 Summary:	Ruby binding of gobject-introspection
 Name:		rubygem-%{rbname}
 
-Version:	2.2.0
+Version:	2.2.4
 Release:	1
 Group:		Development/Ruby
 License:	GPLv2+ or Ruby
