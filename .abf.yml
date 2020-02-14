@@ -3,3 +3,4 @@ removed_sources:
   gobject-introspection-2.2.4.gem: cda3de014da77ff150ff7227e5d5c49c74320361
 sources:
   gobject-introspection-3.0.7.gem: 794c81a17474e297793bb9a1ecff0e1cde6ea6fb
+  gobject-introspection-3.4.1.gem: ca5549ebc08f7b4a3c4b1122e80dd28c3cc81c6b
