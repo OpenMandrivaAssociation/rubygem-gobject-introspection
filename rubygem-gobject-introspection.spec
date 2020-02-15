@@ -49,8 +49,6 @@ rm -rf %{buildroot}
 
 mkdir -p %{buildroot}%{gem_dir} %{buildroot}%{gem_extdir_mri}
 
-/bin/rm -r .%{gem_dir}/gems/%{gem_name}-%{version}/ext/
-
 cp -a .%{gem_dir}/* \
     %{buildroot}/%{gem_dir}/
 
@@ -70,12 +68,23 @@ cp -a .%{gem_extdir_mri}/{gem.build_complete,*.so,*.h} \
 %{gem_instdir}/*.gemspec
 %{gem_instdir}/Rakefile
 
+%{gem_instdir}/ext/%{gem_name}/.sitearchdir.time
+%{gem_instdir}/ext/%{gem_name}/Makefile
+%{gem_instdir}/ext/%{gem_name}/depend
+%{gem_instdir}/ext/%{gem_name}/extconf.rb
+%{gem_instdir}/ext/%{gem_name}/gobject_introspection.def
+%{gem_instdir}/ext/%{gem_name}/*.so
+
 %files doc
 %doc %{gem_docdir}
 %doc %{gem_instdir}/[A-Z]*
 %files devel
 %{gem_extdir_mri}/*.h
-
+%{gem_extdir_mri}/*.h
+%{gem_instdir}/ext/%{gem_name}/*.c
+%{gem_instdir}/ext/%{gem_name}/*.h
+%exclude %{gem_instdir}/ext/%{gem_name}/*.o
+%{gem_instdir}/ext/%{gem_name}/ruby-gobject-introspection.pc
 
 %changelog
 
