@@ -34,6 +34,8 @@ Documents, RDoc & RI documentation for %{name}.
 Summary:    Development files for %{name}
 Group:      Development/Ruby
 
+Requires:   %{name} = %{EVRD}
+
 %description    devel
 Development files for %{name}.
 
